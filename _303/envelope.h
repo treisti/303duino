@@ -100,6 +100,7 @@ class Envelope {
         break;
       case 4: // Release
         _value = _sustain * (1.0f - _step / (_release * _releaseRange));
+        _step ++;
         if(_value <= 0.0f) {
           _phase ++;
         }
